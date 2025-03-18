@@ -1,0 +1,60 @@
+<style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+    label {
+      margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"] {
+      margin-bottom: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    button[type="submit"] {
+      padding: 10px;
+      background-color: #5cb85c;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #4cae4c;
+    }
+  </style>
+    <div class="container">
+        <h3>Ask your project</h3>
+      <form>
+        <label for="email">Email:</label>
+        <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" id="email" name="email" required>
+  
+        <label for="Title">Title:</label>
+        <input type="text" [(ngModel)]="title" [ngModelOptions]="{standalone: true}" id="title" name="title" required>
+  
+        <label for="description">Description:</label>
+        <input type="text" [(ngModel)]="description" [ngModelOptions]="{standalone: true}" id="description" name="description" required>
+  
+        <label for="Price">Price:</label>
+        <input type="number" [(ngModel)]="prize" [ngModelOptions]="{standalone: true}" id="Price" name="Price" required>
+  
+        <button type="submit" (click)="save()">Submit </button>
+      </form>
+    </div>

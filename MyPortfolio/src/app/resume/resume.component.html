@@ -1,0 +1,87 @@
+<div class="conteiner text-center">
+    <button (click)="DownloadFile()" class="btn btn-primary mb-5 shadow border"> Download PDF for Resume</button>
+
+    <div class="pb-2">
+        <accordion [isAnimated]="true" class="shadow">
+            <accordion-group [(isOpen)]="isPubblicationThesisOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;"></div>
+                    <div class="btn-link">My Pubblication</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isPubblicationThesisOpen" style="color: white;">></div>
+                        <div *ngIf="isPubblicationThesisOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Software Development</h2>
+                    <h3>Università Studi di Perugia</h3>
+                    <ul>
+                        <li>Courses on study server side vulnerabilities</li>
+                        <li>Courses on study client side vulnerabilities</li>
+                        <li>Publication on Osint investigation</li>
+                        <li>Article of Operation Security</li>
+                        <li>Article on Cyber threat intelligence</li>
+                    </ul>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isEducationOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;"></div>
+                    <div class="btn-link">Education</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isEducationOpen" style="color: white;">></div>
+                        <div *ngIf="isEducationOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Student Computer Science</h2>
+                    <h3>Università Studi di Perugia</h3>
+                    <ul>
+                        <li>Graduate from Marco Polo Bonghi  tecnical of elettronic and elettrotecnical </li>
+                    </ul>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isCertificationOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;"></div>
+                    <div class="btn-link">Certification</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isCertificationOpen" style="color: white;">></div>
+                        <div *ngIf="isCertificationOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Software Development</h2>
+                    <h3>Università Studi di Perugia</h3>
+                    <ul>
+                        <li>certification of curses on "penetration Testing/Capture the flag” of GARR</li>
+                        <li>·Certificazione MITRE ATT&CK Defender™(MAD) ATT&CK® Cyber Threat Intelligence Certification Training</li>
+                        <li>Certificazione MITRE ATT&CK Defender™ (MAD) ATT&CK® Fundamentals Badge Training</li>
+                    </ul>
+                </div>
+            </accordion-group>
+            <accordion-group [(isOpen)]="isSkilsOpen">
+                <button class="btn btn-block justify-content-between d-flex w-100" accordion-heading>
+                    <div style="visibility: hidden;"></div>
+                    <div class="btn-link">Skills</div>
+                    <div style="width: 10.95px;">
+                        <div *ngIf="!isSkilsOpen" style="color: white;">></div>
+                        <div *ngIf="isSkilsOpen" style="color: white;">v</div>
+                    </div>
+                </button>
+                <div style="text-align: left;">
+                    <h2 class="mb-0">Software Development</h2>
+                    <h3>Università Studi di Perugia</h3>
+                    <ul>
+                        <li>C</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Kotlin</li>
+                    </ul>
+                </div>
+            </accordion-group>
+        </accordion>
+    </div>
+    
+</div>

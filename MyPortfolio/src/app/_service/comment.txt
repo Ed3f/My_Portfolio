@@ -1,0 +1,4 @@
+I servizi di progetto in Angular sono un modo per offrire a tutti lo stesso insieme di funzionalità a qualsiasi
+componente del nostro progetto utilizzando un servizio per fornire informazioni sul nostro progetto in modo da 
+permetterci di accedere ad i progetti anche dalla home page; in precedenza ho usato un servizio da Angular per 
+dare il titolo della pagina; mentre in questo caso creerò e implementerò il mio servizio. 

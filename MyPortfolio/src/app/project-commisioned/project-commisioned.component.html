@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        <!-- I tuoi progetti esistenti -->
+        <div class="card shadow text-center" style="max-width: 350px; min-width: 350px; min-height: 240px;" *ngFor="let project of data.message">
+          <div class="card-body">
+            <h5 class="card-title">{{project.title}}</h5>
+            <p class="card-text">{{project.description}}</p>
+            <p class="card-text">Author of request: {{project.email}}</p>
+            <div class="d-flex flex-wrap justify-content-center">
+              <h5>Price : {{project.prize}}$</h5>
+            </div>
+          </div>
+          <div class="card-footer">
+            <button class="btn" (click)="onDelete(project.title)">Delete Project</button>
+            <button class="btn btn-outline-primary" (click)="onSelectProject(project)">Update Project</button>
+          </div>
+        </div>
+      </div>
+      <div class="col" *ngIf="selectedProject">
+        <!-- Form di aggiornamento -->
+        <form (ngSubmit)="onUpdateProject(selectedProject.email)">
+          <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="selectedProject.title" name="title">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" class="form-control" id="description" [(ngModel)]="selectedProject.description" name="description">
+          </div>
+          <div class="form-group">
+            <label for="prize">Price</label>
+            <input type="number" class="form-control" id="prize" [(ngModel)]="selectedProject.prize" name="prize">
+          </div>
+          <button type="submit" class="btn btn-primary">Submit Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  
+

@@ -1,0 +1,17 @@
+{
+  "name": "serverportfolio",
+  "version": "1.0.0",
+  "description": "is server of my Portfolio for user registration and submit the project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.2.4",
+    "simple-encryptor": "^4.0.0"
+  }
+}

@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row">
+        <!-- About me--->
+        <div class="col-lg shadow border m-1">
+                <div class="text-center">
+                    <h2>
+                        About Me   
+                    </h2>
+                    <img src="../../assets/profilePict.jpg"alt = "profile picture" width="256" height="256" class= "rounded-circle">
+                    <p>
+                        Hello visitor, thanks for stopping by.
+                        I am currently studying computer science at the University of Perugia, and would like to one day work in cyber threat intelligence.
+                        Between one exam and another I had the opportunity to do some small projects that you can find in the portfolio section, if you have ideas to improve them or want to collaborate on my future projects don't hesitate to contact me through the various social networks or via email; you can find everything in the contact section.
+                        Thanks for coming this far, goodbye visitor.
+                    </p>
+                </div>
+        </div>
+        <!-- Featured Project--->
+        <div class="col-lg shadow border m-1">
+            <div class="text-center">
+                <h2>
+                    Featured Project
+                </h2>
+                <h4> {{featuredProject.name}} </h4>
+            </div>
+
+            <carousel>
+                <div *ngFor="let picture of featuredProject.pictures">
+                    <slide><img src="{{picture}}" alt="slide" style="display: block;width: 100%;"></slide>
+                </div>
+            </carousel>
+            <p class="mt-2">{{featuredProject.summary}}</p>
+            <p>visit the protfolio section to learn more...</p>
+        </div>
+    </div>
+
+</div>
